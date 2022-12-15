@@ -17,8 +17,9 @@ In each file, I basically go through preparing input data, loading train dataset
 In some files, I also tried varing number of epoches, applying learning rate decay and applying data augmentation.
 
 Findings(Not a surprise)
-1. ResNet are generally much better than classic CNN models.
-2. Within a model, increasing number of training epoch (like to 50) might not increase performance because of over-fitting problem on the training set.
+1. ResNet are generally much better than classic CNN models. According to Kaggle results, CNN models have twice the loss of Res models.
+2. It's not necessary that the top1 hyperparametes on validation set outperform top2 or 3 hyperparameters on 20 run of whole training set.
+3. Within a model, increasing number of training epoch (like to 50) might not increase performance because of over-fitting problem on the training set.
 
 
 Findings(A surprise)
@@ -27,3 +28,4 @@ Findings(A surprise)
 3. Not all augmentation improve the prediction accuracy, although I tried multiple augmentations, which seems to improve the quality of picture according to my eyes. This suggests that for clear original input like the RGB and depth data given, augmentation may not be necessary.
 4. Mixing both RGB image and depth image gives the worst performance. This suggests that too much redundant information might hurt performance. Maybe that's why no researchers publish results using them. 
 5. 3 channels of RGB data performs better than 1 channel of RGB data, although they contain same information for human eyes.
+
