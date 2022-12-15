@@ -25,7 +25,7 @@ Findings------------------(Not a surprise)
 Findings--------------------(A surprise)
 1. Although CNN loses and Res wins, their score gap isn't very large, which is surprising.
 2. All the best learning rate are close to 1e-4 and 1e-3. Rather than the lucky learning rate 2e-5.
-3. Not all augmentation improve the prediction accuracy, although I tried multiple augmentations, which seems to improve the quality of picture according to my eyes. This suggests that for clear original input like the RGB and depth data given, augmentation may not be necessary.
+3. Not all augmentation improve the prediction accuracy, even if it seems to improve the quality of picture according to human eyes. For example, in res_3depth with augmentation, although I carefully picked a augmentation among all possible augmentations,  which is to invert the depth image to make it brighter and more colorful, in the first round of grid search, the loss is much larger than previously without augmentation. This suggests that whether an augmentation is good or not shall be verified after training rather than just looking.
 4. Mixing both RGB image and depth image gives the worst performance. This suggests that too much redundant information might hurt performance. Maybe that's why no researchers publish results using them. 
 5. 3 channels of RGB data performs better than 1 channel of RGB data, although they contain same information for human eyes.
 
