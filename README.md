@@ -16,13 +16,13 @@ In each file, I basically go through preparing input data, loading train dataset
 
 In some files, I also tried varing number of epoches, applying learning rate decay and applying data augmentation.
 
-Findings(Not a surprise)
+Findings------------------(Not a surprise)
 1. ResNet are generally much better than classic CNN models. According to Kaggle results, CNN models have twice the loss of Res models.
 2. It's not necessary that the top1 hyperparametes on validation set outperform top2 or 3 hyperparameters on 20 run of whole training set.
 3. Within a model, increasing number of training epoch (like to 50) might not increase performance because of over-fitting problem on the training set.
 
 
-Findings(A surprise)
+Findings--------------------(A surprise)
 1. Although CNN loses and Res wins, their score gap isn't very large, which is surprising.
 2. All the best learning rate are close to 1e-4 and 1e-3. Rather than the lucky learning rate 2e-5.
 3. Not all augmentation improve the prediction accuracy, although I tried multiple augmentations, which seems to improve the quality of picture according to my eyes. This suggests that for clear original input like the RGB and depth data given, augmentation may not be necessary.
