@@ -7,13 +7,13 @@ For model, I choose between cnn and ResNet50.
 
 For input data, I create 4 combinations.
 
-1 channel of RGB image from a single perspective, which I denote as 1img0 in filename.
+------1 channel of RGB image from a single perspective, which I denote as 1img0 in filename.
 
-3 channels of RGB images from a single perspective, which I denote as 3img0 in filename.
+------3 channels of RGB images from a single perspective, which I denote as 3img0 in filename.
 
-2 channels of RGB images from a single perspective + 1 channel of depth image from one perspective, which I denote as 2img0+1depth in filename.
+------2 channels of RGB images from a single perspective + 1 channel of depth image from one perspective, which I denote as 2img0+1depth in filename.
 
-3 channels of depth image from 3 perspective, which I denote as 3depth in filename.
+------3 channels of depth image from 3 perspective, which I denote as 3depth in filename.
 
 In each file, I basically go through preparing input data, loading train dataset and test dataset, constructing model, cross-validatation, doing grid search. 
 
@@ -29,3 +29,4 @@ Findings(A surprise)
 2. All the best learning rate are close to 1e-4 and 1e-3. Rather than the lucky learning rate 2e-5.
 3. Not all augmentation improve the prediction accuracy, although I tried multiple augmentations, which seems to improve the quality of picture according to my eyes. This suggests that for clear original input like the RGB and depth data given, augmentation may not be necessary.
 4. Mixing both RGB image and depth image gives the worst performance. This suggests that too much redundant information might hurt performance. Maybe that's why no researchers publish results using them. 
+5. 3 channels of RGB data performs better than 1 channel of RGB data, although they contain same information for human eyes.
