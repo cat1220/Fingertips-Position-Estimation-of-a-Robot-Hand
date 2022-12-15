@@ -1,9 +1,7 @@
 # Fingertips-Position-Estimation-of-a-Robot-Hand
 ML final project
 
-There are 6 google colab files in the code part. Each is named after model and input type.
-
-For model, I choose between cnn and ResNet50.
+There are 6 google colab files in the code part. Each is named after model and input type. For model, I choose between cnn and ResNet50.
 
 For input data, I create 4 combinations.
 
