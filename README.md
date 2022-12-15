@@ -12,9 +12,7 @@ For input data, I create 4 combinations.
 
 ------3 channels of depth image from 3 perspective, which I denote as 3depth in filename.
 
-In each file, I basically go through preparing input data, loading train dataset and test dataset, constructing model, cross-validatation, doing grid search. 
-
-In some files, I also tried varing number of epoches, applying learning rate decay and applying data augmentation.
+In each file, I basically go through preparing input data, loading train dataset and test dataset, constructing model, cross-validatation, doing grid search. In some files, I also tried varing number of epoches, applying learning rate decay and applying data augmentation.
 
 Findings------------------(Not a surprise)
 1. ResNet are generally much better than classic CNN models. According to Kaggle results, CNN models have twice the loss of Res models, (0.0004 compared to 0.0002).
